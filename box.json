@@ -1,0 +1,15 @@
+{
+    "name":"Preside Extension: Dev Helpers",
+    "version":"1.0.0",
+    "author":"Jan Jannek",
+    "directory":"application/extensions",
+    "homepage":"https://bitbucket.org/jjannek/preside-ext-dev-helpers",
+    "documentation":"https://bitbucket.org/jjannek/preside-ext-dev-helpers",
+    "type":"preside-extensions",
+    "location":"https://bitbucket.org/jjannek/preside-ext-dev-helpers/get/1.0.0.zip",
+    "repository":{
+        "type":"git",
+        "URL":"https://bitbucket.org/jjannek/preside-ext-dev-helpers.git"
+    },
+    "slug":"preside-ext-dev-helpers"
+}

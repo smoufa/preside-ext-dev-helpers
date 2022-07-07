@@ -29,7 +29,7 @@ The traditional login is still available optionally.
 Within your application's Config.cfc, enable it:
 
     settings.features.devQuickLinks.enabled = true;
-    
+
 Within the Preside Admin on the right side of the bread crumb navigation, you will find 2 links:
 
 * console - toggles the Developer console (tough to get to on some non-english keyboards)
@@ -50,13 +50,13 @@ Within a handler or view, use the following
     ...
 
 Or use the service, e.g. within your own service
-    
+
     component {
 
         property name="dumpLogService" inject="dumpLogService";
 
         function myFunction() {
-            
+
             ...
             dumpLogService.dumpLog( myvar );
             ...
@@ -71,10 +71,25 @@ If you are using Preside 10.11 or greater you can make use of a nice little shor
 Instead of injecting the dumplogservice you can directly call the dumplog method as follows:
 
     $helpers.dumpLog( myvar );
-    
+
 This works on all services that are annotated as being a presideservice.
 
 Head over to Preside Admin > System > Dump Logs to check the dumps there.
+
+### Feature Information
+Within your application's Config.cfc, enable it:
+
+    settings.features.featureInfo.enabled = true;
+
+It add a Features tab to the System Information page and allows an admin user to see what app features are available and enabled or disabled. Devs can also describe their features either by providing a description in the feature definition or in i18n:
+
+i18n/features.properties:
+
+    features.mycoolfeature.description=This is a cool feature
+
+or in your Config.cfc:
+
+    features.mycoolfeature = { enabled: true, description: "This is a cool feature" };
 
 ## Contribution
 
